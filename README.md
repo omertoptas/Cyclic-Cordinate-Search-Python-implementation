@@ -201,6 +201,11 @@ plt.plot(ccs[:,1],ccs[:,2],'-.')
 plt.gcf().set_size_inches(15, 10)
 ```
 
+
+![png](output_13_0.png)
+
+
+
 In this image every dot represent one iteration of cyclic cordinate search algorithm. Basically algorithm find a direction where function's value gets smaller and moves on that direction until function's value do not get smaller. Then it finds a new direction to move. On the next cells algorithm will be tried with a simpler function.
 
 
