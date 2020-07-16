@@ -1,5 +1,3 @@
-# Cyclic-Cordinate-Search-Python-implementation
-This notebook contains the implementation of cyclic cordinate search method.
 All imported packages are used to visualize the function and result of the algorithm.
 
 
