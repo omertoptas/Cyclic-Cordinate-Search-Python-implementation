@@ -8,17 +8,7 @@ from mpl_toolkits.mplot3d import Axes3D
 from tabulate import tabulate
 ```
 
-Following function will be used to test the algorithm:
-
-$f = (5x_1-x_2)^4 + (x_1-2)^2 + x_1 - 2x_2 + 12$
-
-$\begin{equation}
-\frac{\partial f}{\partial x_1} = 20(5x_1-x_2)^3 + 2(x_1-2)
-\end{equation}$
-
-$\begin{equation}
-\frac{\partial f}{\partial x_2} = -4(5x_1-x_2)^3 - 2
-\end{equation}$
+![png](1.png)
 
 
 ```python
@@ -57,7 +47,7 @@ plt.show()
 ![png](output_4_0.png)
 
 
-As it can be seen from the picture, the value of the function increases rapidly as it moves away from the global minimum value. Notice that z axis value is multiplied with $10^7$.
+![png](2.png)
 
 
 ```python
@@ -74,7 +64,7 @@ plt.gcf().set_size_inches(15, 10)
 ![png](output_6_0.png)
 
 
-As it can be seen from the contour plot, global minimum of the function approximately lies on the line $x_2 = 5x_1$ . Notice that every contour line represents a change of $500,000$ in the value of function.
+![png](3.png)
 
 
 ```python
@@ -110,7 +100,7 @@ def golden(f,x_low, x_up, tol, max_n):
     return (x_n1 + x_n2)/2.0
 ```
 
-Golden section method used to find local minimum of a one variable function. It is used to find minimums of the functions where x1 and x2 are set to a constant therefore algorithm could decide the direction of the movement.
+![png](4.png)
 
 
 ```python
@@ -184,7 +174,7 @@ print(tabulate(ccs[:10]+ccs[-10:],headers=['Iteration','x1','x2','f(x1,x2)']))
             821   6.5967   33.7822  -27.4311
     
 
-Algorithm stoped at the point $(x_1,x_2) = (6.5967,33.7822)$ where the value of the function equals to $-27.4311$ .Global minimum of the function is approximately at the point ($x_1$, $x_2$) $=$ ($6.5$,$33.2937$ ) with value equal to $-27.4406$ which is pretty close to the result of the algorithm. Decreasing the value of ***epsilon*** will led algorithm to converge closer to the global minimum but with the cost of more iterations therefore epsilon value should be chosen wisely or it can be set via tests like *cross-validation*.
+![png](5.png)
 
 
 ```python
